@@ -1,0 +1,22 @@
+{
+  "name": "grpc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "grpc-client": "node ./client.js",
+    "grpc-server": "node ./server.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.8.0",
+    "@grpc/proto-loader": "^0.7.4",
+    "express": "^4.18.2",
+    "prompt-sync": "^4.2.0",
+    "readline": "^1.3.0",
+    "readline-sync": "^1.4.10"
+  },
+  "description": ""
+}

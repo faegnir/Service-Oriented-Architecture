@@ -1,0 +1,12 @@
+{
+    "currencies":[
+        {"code":"USD","alphaCode":"USA","numericCode":"840","name":"U.S. Dollar","rate":0.053459396524314,"date":"Tue, 27 Dec 2022 23:55:01 GMT","inverseRate":18.70574},
+    {"code":"EUR","alphaCode":"Germany","numericCode":"978","name":"Euro","rate":0.050294816726157,"date":"Tue, 27 Dec 2022 23:55:01 GMT","inverseRate":19.88272},
+    {"code":"GBP","alphaCode":"England","numericCode":"826","name":"U.K. Pound","rate":0.044393273536018,"date":"Tue, 27 Dec 2022 23:55:01 GMT","inverseRate":22.52596},
+    {"code":"CAD","alphaCode":"Canada","numericCode":"124","name":"Canadian Dollar","rate":0.072458429904278,"date":"Tue, 27 Dec 2022 23:55:01 GMT","inverseRate":13.80104},
+    {"code":"JPY","alphaCode":"Japan","numericCode":"392","name":"Japanese Yen","rate":7.1162161862147,"date":"Tue, 27 Dec 2022 23:55:01 GMT","inverseRate":0.14025},
+    {"code":"AUD","alphaCode":"Australia","numericCode":"036","name":"Australian Dollar","rate":0.079547684665323,"date":"Tue, 27 Dec 2022 23:55:01 GMT","inverseRate":12.57103},
+    {"code":"SEK","alphaCode":"Sweden","numericCode":"752","name":"Swedish Krona","rate":0.56009137719627,"date":"Tue, 27 Dec 2022 23:55:01 GMT","inverseRate":1.78542},
+    {"code":"CNY","alphaCode":"China","numericCode":"156","name":"Chinese Yuan","rate":0.3727791568002,"date":"Tue, 27 Dec 2022 23:55:01 GMT","inverseRate":2.68255}
+    ]
+}

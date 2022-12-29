@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<body style="background-image: url({{apod}});background-attachment: fixed;  background-size: auto 100%;">
+<script>
+function ShowAndHide() {
+    var x = document.getElementById('SectionName');
+    var btn = document.getElementById('ext');
+    var ttl = document.getElementById('baslik');
+    if (x.style.display == 'none') {
+        x.style.display = 'block';
+        ttl.style.display = 'block';
+        btn.innerHTML = "Sakla";
+    } else {
+        x.style.display = 'none';
+        ttl.style.display = 'none';
+        btn.innerHTML = "Göster";
+    }
+}
+</script>
+{% for date in registrants %}
+    {% if loop.last %}
+        <h1 name="cevap">Cevap:  {{registrants[date][3]}}</h1>
+    {% endif %}
+{% endfor %}
+<h1>Butona Tıklayıp İşlem Kayıtlarını Görebilirsiniz!</h1><button id="ext" ONCLICK="ShowAndHide()">Göster</button>
+<h1 id="baslik" style="color: #f4f4f4;display: none;">İşlem Kayıtları</h1>
+<DIV ID="SectionName" STYLE="display:none">
+
+    <table>
+        <thead>
+            <tr>
+            <th>Tarih</th>
+            <th>İlk Sayı</th>
+            <th>İkinci Sayı</th>
+            <th>İşlem</th>
+            <th>Sonuç</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for date in registrants %}
+             <tr>
+                 <td>{{date}}</td>
+                 <td>{{ registrants[date][0] }}</td>
+                 <td>{{ registrants[date][1] }}</td>
+                 <td>{{ registrants[date][2] }}</td>
+                 <td>{{ registrants[date][3] }}</td>
+             </tr>
+            {% endfor %}
+        </tbody>
+    </table></DIV>
+    <!--<DIV>
+        <table>
+            <thead>
+                <tr>
+                <th>Flag</th>
+                <th>Para Birimi</th>
+                <th>TRY Kuru</th>
+                <th>Hesaplanan Kur</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for name in currency %}
+                 <tr>
+                     <td><img src={{currency[name][1]}} alt="alternatetext" width="40px" title={{name}}></td>
+                     <td>{{name}}</td>
+                     <td>{{ currency[name][0] }}</td>
+                     <td>{{ currency[name][2] }}</td>
+                 </tr>
+                {% endfor %}
+            </tbody>
+        </table></DIV>-->
+</body>
+{% endblock %}

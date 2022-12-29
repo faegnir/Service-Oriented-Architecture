@@ -1,0 +1,32 @@
+syntax = 'proto3';
+
+package bookStorePackage;
+
+// Our Book service definition.
+service Log {
+    rpc addLog (LogFormat) returns (LogFormat);
+    //rpc readBook (BookRequest) returns (BookItem);
+    rpc readLogs (Empty) returns (Logs);
+}
+
+// Our BookItem message definition.
+message LogFormat {
+    string date = 1;
+    int32 first = 2;
+    int32 second = 3;
+    string operation = 4;
+    string result =5;
+}
+
+/* Our BookRequest message definition.
+message BookRequest {
+    int32 id = 1;
+}*/
+
+// Our BooksList message definition. This will be an array of BookItem.
+message Logs {
+    repeated LogFormat logs = 1;
+}
+
+// the method `readBooks` does not accept any parameter so we have to specify that it is empty.
+message Empty {}

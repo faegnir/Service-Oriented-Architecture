@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block body %}
+<body style="background-image: url({{apod}});background-attachment: fixed;  background-size: auto 100%;">
+<h1>HESAP MAKİNESİ</h1>
+<form action="/liste" method="post">
+    <input autocomplete="off" placeholder="İlk Sayı" type="number" name="first">
+    <input autocomplete="off" placeholder="İkinci Sayı" type="number" name="second">
+    <select name="islem">
+        {% for islem in islemler %}
+            <option value="{{ islem }}">{{ islem }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Hesapla">
+</form>
+<h1>DÖVİZ KURU</h1>
+
+<form>
+    <input autocomplete="off" placeholder="Türk Lirası" type="number" name="para" min="0">
+    <input type="submit" value="Hesapla">
+</form>
+
+<DIV>
+<table style="padding: 20px;">
+    <thead>
+        <tr>
+        <th>Flag</th>
+        <th>Para Birimi</th>
+        <th>TRY Kuru</th>
+        <th>Hesaplanan Kur</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for name in currency %}
+         <tr>
+             <td><img src={{currency[name][1]}} alt="alternatetext" width="40px" style="border-radius: 10px; margin: -2px -1px -5px -2px;" title={{name}}></td>
+             <td>{{name}}</td>
+             <td>{{ currency[name][0] }}</td>
+             <td>{{ currency[name][2] / currency[name][0] }}</td>
+         </tr>
+        {% endfor %}
+    </tbody>
+</table></DIV>
+</body>
+{% endblock %}

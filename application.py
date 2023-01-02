@@ -71,7 +71,7 @@ def register():
     with open("./grpc/apiPath/aps.json", "w") as outfile:
         json.dump(REGISTRANTS, outfile)
     import subprocess
-    command = "cd C:/Users/Acer/Desktop/enroll-sport-flask-py-main/grpc & node client.js"
+    command = "cd C:/Users/Acer/Documents/Python/Service-Oriented-Architecture/grpc & node client.js"
     subprocess.check_output(command, shell=True)
     #len(grpcRes.json()["date"])
     grpcRes = requests.get("http://127.0.0.1:3000/grpcApi")
